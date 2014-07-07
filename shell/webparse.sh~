@@ -1,0 +1,21 @@
+#! /bin/bash
+
+
+#
+#解析网页
+#
+parse(){
+local web_add
+local list_add
+web_add=${1:?需要提供储存网页位置的文件}
+list_add=${2:? 需要提供储存url的文件}
+
+web_add=./web/$web_add
+while read webname
+do
+webname=./web/$webname
+list_add=./web/$list_add
+sed -n 's/^.*href=\"http:\/\/\([^"]*\)\".*$/\1/gp' $webname >>$list_add
+#使用【^"】来匹配最短字符串，如果用\(.*\)\"会匹配到最后一个"号。
+done < $web_add
+}

@@ -1,0 +1,102 @@
+#! /bin/bash
+
+#变量要先申明才能使用
+shopt -s -o nounset
+
+#用m来暂存取得到六个号码
+m=
+
+#
+#函数区
+#
+
+
+#取得一个1～42的号码
+function GetLOTO()
+{
+local r
+
+r=$(($RANDOM%43))
+
+if [ $r -eq 0 ];then
+r=$[ r+1 ]
+fi
+
+#使每个号码都用二位数来表示
+if [ $r -le 9 ];then
+echo "0$r"
+else
+echo "$r"
+fi
+}
+
+function GetNumAndCheckRepeat()
+{
+local n
+
+m=$({ GetLOTO; GetLOTO; GetLOTO; GetLOTO; GetLOTO; GetLOTO; } | sort -n)
+
+# 把这6个号码暂存一份给n
+n="$m"
+
+#检查重复
+n=$(echo $n | tr ' ' '\n' | uniq -d)
+
+#如果$n为空，表示没有重复，则传回真（0）
+if [ -z "$n" ];then
+return 0
+else
+return 1
+fi
+}
+
+
+#
+#住程序区
+#
+
+
+
+#判断使用者是否提供数组
+if [ $# -ne 1 ];then
+echo "使用法： $0 数组"
+exit
+fi
+
+
+#数组要介于1～99之间
+if [ $1 -lt 1 -o $1 -gt 99 ];then
+echo "使用法; $0 【1-99】组"
+exit
+fi
+
+
+
+declare -i i=1 j
+
+
+while [ $i -le $1 ]
+do
+GetNumAndCheckRepeat
+
+if [ $? -ne 0 ];then
+continue
+fi
+
+
+
+j=$i
+
+if [ $j -le 9 ];then
+echo -n "第0$j 组："
+else
+echo -n "第$j 组："
+fi
+
+
+echo $m
+
+
+i=$[ i+1 ]
+done
+

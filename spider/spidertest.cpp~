@@ -1,0 +1,14 @@
+#include "spider.h"
+int main()
+{
+//spider_init();
+//pool->process_job(spider_thread,NULL);
+//pool->process_job(webparse_thread,NULL);
+//pool->shutdownwait();
+//string url = "www.new1.uestc.edu.cn/news/index/id/2918";
+string url = "www.uestc.edu.cn/aaaaa/a";
+string hostname,getmsg,filename;
+urlparser(url,hostname,getmsg,filename);
+cout<<hostname<<endl<<getmsg<<endl<<filename<<endl;
+return 0;
+}

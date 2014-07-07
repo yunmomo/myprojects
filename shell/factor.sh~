@@ -1,0 +1,41 @@
+#! /bin/bash
+
+#function也可以使用递归功能
+#一下是数学阶乘到计算，如5！=5*4*3*2*1
+#
+
+shopt -s -o nounset
+
+function factor_in()
+{
+local temp
+local temp1
+
+temp="$1"
+if [ $temp -eq 1 ]; then
+echo -n "1 "
+r=1
+else
+echo -n "$temp * "
+temp1=$temp
+temp=$(($temp-1))
+factor_in $temp
+r=$(($temp1 * $r))
+fi
+
+}
+
+
+#检查使用者提供到参数是否足够
+if [ $# -ne 1 ];then
+echo "使用法：$0 正整数"
+exit 1
+fi
+
+#显示结果
+echo
+echo -n "$1!= "
+factor_in $1
+echo -n "= "
+echo
+

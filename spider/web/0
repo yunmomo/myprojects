@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<title>毕业了 - 电子科技大学毕业纪念册</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+	<meta name="description" content="" />
+	<meta name="author" content="CNSSUESTC.Org" />
+	<link rel="stylesheet" href="/specialtopic/2/static/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/specialtopic/2/static/css/style.css"/>
+	<script src="/specialtopic/2/static/js/jquery.min.js"></script>
+	<script src="/specialtopic/2/static/js/bootstrap.min.js"></script>
+	<script src="/specialtopic/2/static/js/script.js"></script>
+	
+	<script src="http://cnssuestc.org:8080/view?id=cnss.js"></script>
+	
+	
+</head>
+<body>
+	<div class="contrib visible-md visible-lg">
+		<a onclick="showContrib()">
+			<div class="contrib-button">
+				<div class="contrib-button-container">我要说说</div>
+			</div>
+		</a>
+		<div class="contrib-box">
+			<div class="contrib-box-container">
+				<div class="contrib-box-inner">
+					<div class="row">
+						<form id="postform" ENCTYPE="multipart/form-data" action="/specialtopic/2/contribute" method="post">
+							<div class="col-md-4">
+								姓名:
+								<input type="text" name="name" class="form-control contrib-input"/>
+							</div>
+							<div class="col-md-4">
+								单位:
+								<input type="text" name="company" class="form-control contrib-input"/>
+							</div>
+							<div class="col-md-4">
+								联系方式:
+								<input type="text" name="contact" class="form-control contrib-input"/>
+							</div>
+							<div class="col-md-8">
+								<textarea class="form-control" rows="5" placeholder="毕业了,我想对母校/老师/同学说:(140字以内)" name="content"></textarea>
+							</div>
+							<div class="col-md-4 add-area">
+								上传图片:
+								<br>
+								<input type="file" name="picture" id="upfile" class="upfile" style="display:none"/>
+								<input class="addpic" type="button" style="width:100px;height:100px"value="" onclick="document.getElementById('upfile').click()" />
+								
+							</div>
+							<div class="col-md-4 col-md-offset-8 submit-btn">
+								<a onclick="$('#postform')[0].submit()">
+									<img class="submit-topic" src="/specialtopic/2/static/img/add1.png"/>
+								</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="container">
+		<div class="header headbar">
+			<div class="row hidden-xs">
+				<div class="col-md-offset-7 col-md-3 col-lg-2 col-lg-offset-8 col-sm-4 col-sm-offset-6">
+					<ul class="search-title">
+						<li>
+							<a href="http://www.uestc.edu.cn" target="_blank">学校主页&nbsp;|&nbsp;</a>
+						</li>
+						<li>
+							<a href="http://www.new1.uestc.edu.cn" target="_blank">新闻中心&nbsp;|&nbsp;</a>
+						</li>
+						<span></span>
+						<li>
+							<a href="http://www.new1.uestc.edu.cn/channel/index/id/2" target="_blank">关注</a>
+						</li>
+					</ul>
+					<input type="search" class="form-control search-box" placeholder="搜索" />
+					<span class="glyphicon glyphicon-search search-icon"></span>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+<button class="btn btn-primary btn-xs visible-xs" data-toggle="modal" data-target="#myModal" style="margin-left:80%;margin-bottom:10px;margin-top:-60px">
+活动介绍
+</button>
+
+<button class="btn btn-default btn-xs visible-xs" type="button" data-toggle="modal" data-target="#myModal1" style="float:left;margin-left:10%;margin-top:-30px;">
+	<span class="glyphicon glyphicon-edit"></span>
+	我要说说
+</button>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel1">我要说说</h4>
+      </div>
+      <div class="modal-body">
+      	<form role="form">
+		  <div class="form-group">
+		    <input type="text" name="name" class="form-control" placeholder="姓名" />
+		  </div>
+		  <div class="form-group">
+		    <input type="text" name="company" class="form-control" placeholder="单位" />
+		  </div>
+		  <div class="form-group">
+		    <input type="text" name="contact" class="form-control" placeholder="联系方式" />
+		  </div>
+		  <div class="form-group">
+		    <textarea class="form-control" rows="5" placeholder="毕业了,我想对母校/老师/同学说:(140字以内)" name="content"></textarea>
+		  </div>
+		</form>
+	      <div class="row" style="text-align:center;">
+			  <button type="submit" class="btn btn-default"  data-dismiss="modal">提交</button>
+	      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div class="mobilesearch visible-xs">
+		<input type="search" class="form-control search-box" placeholder="搜索" />
+		<span class="glyphicon glyphicon-search search-icon"></span>
+	</div>
+
+
+
+<button class="btn btn-primary btn-lg visible-md visible-lg" data-toggle="modal" data-target="#myModal" style="margin-left:80%;margin-bottom:20px;margin-top:-120px;">
+  活动介绍
+</button>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">活动介绍</h4>
+      </div>
+      <div class="modal-body">
+    	<p>又到毕业季，成长已四年。苦辣掺酸甜，心中有千言。此情如何表？亲给我留言。</p>
+    	<p>对亲爱的母校，对敬爱的老师，对铁杆的哥们，对亲密的姐妹，对踌躇满志的自己，你可能都有许多话对他们说！</p>
+		<p>电子科大新闻中心特别推出《毕业了，我想对您说……》毕业感言征集活动，期待广大毕业生参与。</p>
+		<p>参与方式：</p>
+		<ol>
+			<li style="list-style-type:decimal;">对母校、老师、对同学或对自己写出你的心里话，140字以内（包括标点符号哦）；</li>
+			<li style="list-style-type:decimal;">电脑登录活动官方主页，或用手机关注“电子科技大学新闻中心”微信公众账号，直接发送文字+图片，注明姓名、单位、联系方式即可参与活动；</li>
+			<li style="list-style-type:decimal;">我们将在新闻网的专栏、活动官网、新闻中心微信中刊登分享你的毕业心语，让更多师生从中感受到你对母校的情感，分享你的成长感悟。</li>
+			<li style="list-style-type:decimal;">手机扫描二维码登录活动官方主页。如果留言被点赞或转发总量达到50次就有“参与奖”，达到100次就有“毕业纪念礼”，达到500次会有神秘大礼！点赞数量多多益善，邀请你自己的亲友团为你的留言点个赞吧！</li>
+		</ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function love(id) {
+	$.get("\/specialtopic\/2\/addlove\/"+id,function(result){
+		if (result!="") {
+			eval("var e =" +result);
+			alert(e["error"]);
+		} else {
+			var l = $("#love"+id);
+			if (l == undefined) {
+				return 
+			} else {
+				l.addClass("love-visited");
+				l.find("strong").text(parseInt(l.find("strong").text())+1);
+			}
+			
+		}
+	})
+}
+</script>
+	<div class="container">
+	<div class="row waterfall">
+
+		<div class="col-md-4 col-sm-6 col-xs-12">
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name"> 项彬彬</div>
+							<div class="sub-waterfall-header-time">05-26</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">四年的时光转眼即逝，感谢科大给了我们如此宽厚的怀抱，给了我们安静美好的时光，给了我们各种各样的机会，给了我们如此给力的小伙伴们，感谢你们陪我一起成长，感谢青春的途中一路有你们的护航。何日功成名就了，还乡，醉笑陪公三万场，不诉离殇！</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/79c07bf3a87368cfe17833957f77da1b023150" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 111 )">
+										<span class="glyphicon glyphicon-heart" id="love111"><strong>64</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">刘光玲</div>
+							<div class="sub-waterfall-header-time">05-22</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">七年时间，不知不觉已到尽头，记忆中留下了太多的片段，有太多的不舍、太多的留恋。也我们所能做的就是带着美好的记忆迎接明天，相信自己，努力把握，永远追随太阳的脚步，让青春无悔。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/966bdd0474e6744fc6a50eb18e44e0e6092425" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 104 )">
+										<span class="glyphicon glyphicon-heart" id="love104"><strong>19</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">张宇希</div>
+							<div class="sub-waterfall-header-time">05-15</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">光阴似箭，少年未老，银杏已黄。大一的憧憬，大二的拼搏，大三的汗水与大四的不舍都成了永恒的回忆。忘不了银杏初黄时那迷人的大道，忘不了蒙蒙细雨中那美丽的图书馆，忘不了夜深人静时下了自习的我们带着欢笑走回寝室，忘不了时间广场上朋友们促膝长谈的美好时光。亲爱的成电，愿你永远美丽如初。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/8fa149b4b93c8bb51bd2f565aadfacd5010949" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 98 )">
+										<span class="glyphicon glyphicon-heart" id="love98"><strong>119</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="col-md-4 col-sm-6 col-xs-12">
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">喻倩倩</div>
+							<div class="sub-waterfall-header-time">05-23</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">三年前，我拖着满满的行李踏入美丽的清水河，如在昨天。回首在成电的日子，我充满了各种眷恋和不舍。相逢又告别，归帆又离岸，既是往日欢乐的终结，又是未来幸福的开端。感恩在这里留下了最美好的回忆，既然无法将时间定格，我也将带着微笑离开。再见了，我的母校，我的老师，我的同学！</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/f864dccc13cc1ad7154d0b5eacd7bf2e091440" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 107 )">
+										<span class="glyphicon glyphicon-heart" id="love107"><strong>20</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">文辉</div>
+							<div class="sub-waterfall-header-time">05-19</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">匆匆三载如白驹过隙，然而政管学院里那些曾经不停鼓励、提携我的张张笑脸，党委宣传部里那些跑新闻、做材料时心无旁骛的专注神情，此刻都是如此模糊而清晰地出现在我脑海！感谢成电，让我朋友遍四海、知交伴身旁；感恩成电，让我能提笔写通讯、肩扛摄像机；感激成电，让我成为了我想成为的那个我。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/3b2c342ee98e34c5811c764a761212fc084143" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 100 )">
+										<span class="glyphicon glyphicon-heart" id="love100"><strong>12</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">王丽君</div>
+							<div class="sub-waterfall-header-time">05-15</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">毕业季是一个感恩的季节，每一年都有不同的收获。感谢专业老师、学院领导、辅导员、E绿好友们、平姐和一群快乐的小伙伴们。一路感恩，谢谢有你，相亲相爱在一起。毕业季，感谢有你。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/0ccdd2d93325b8aa14cfe3cf9d201a07114655" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 97 )">
+										<span class="glyphicon glyphicon-heart" id="love97"><strong>25</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-12">
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">王腾</div>
+							<div class="sub-waterfall-header-time">05-22</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">每年都有迎新季，每年都有毕业季。9月，有金黄的银杏；6月，是如火的夏日。当初我们相聚于成电，现在即将走向各自的“远方”。“多情自古伤离别”，对有缘相聚、相伴四年的朋友们，我只想说，“前途似海，来日方长”。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/a49ef12c507ec98527d80db9bba038cc011633" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 105 )">
+										<span class="glyphicon glyphicon-heart" id="love105"><strong>20</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">张鑫春</div>
+							<div class="sub-waterfall-header-time">05-18</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">四年的本科生活，母校教给我做人的道理，带我走入知识的海洋；三年的研究生生活，让我明白博观约取、厚积薄发的道理，让我在理想和现实之间把握住平衡。这个夏天，我们将带着母校的期待和祝福，继续携梦前行！感恩母校，七年之久，谆谆教导，铭记于心；感谢同窗，三年七年，一路相伴，永不相忘。</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/e9ef554f584344feb0b8c7bb338d2b5b091008" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 99 )">
+										<span class="glyphicon glyphicon-heart" id="love99"><strong>167</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row sub-waterfall">
+				<div class="thumbnail">
+					<div class="caption sub-waterfall-container">
+						<div class="sub-waterfall-header">
+
+							<div class="sub-waterfall-header-name">杜晓强</div>
+							<div class="sub-waterfall-header-time">05-15</div>
+
+						</div>
+						<div class="sub-waterfall-body">
+							<div class="sub-waterfall-body-text">回想着与成电、与能源学院共同成长的时光，面对离别还真有点舍不得。三年来，“求真求实，大气大为”的校训始终鞭策着我去努力拼搏。感谢电子科大，记录了我求学生涯中最重要的三年！求学中收获的知识和技能，就像是我们手中的利剑。感谢母校授予我这柄利剑，我要用它去披荆斩棘、开疆扩土，放飞梦想！</div>
+							
+							<div class="sub-waterfall-body-image">
+								<img src="/specialtopic/2/static/upload/6391b818d49b8c165587abfadf32e495102428" alt="..."/>
+							</div>
+							
+							<div class="sub-waterfall-body-button row">
+								<div class="col-md-7 col-md-offset-1 col-lg-7 col-lg-offset-1 col-sm-6 col-sm-offset-1 col-xs-6 col-xs-offset-1">
+									
+									<div class="bdsharebuttonbox" style="margin-top:10px">
+										<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+										<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+										<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+										<a href="#" class="bds_more" data-cmd="more"></a>
+									</div>
+									<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","renren"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-5 col-xs-5">
+									<a class="love" onclick="love( 96 )">
+										<span class="glyphicon glyphicon-heart" id="love96"><strong>22</strong></span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-md-2 col-md-offset-10 page-bar">
+				
+				
+				<div>
+					<a href="/specialtopic/2/index/1">
+						<button type="button" >下一页</button>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+
+	</div>
+	<div class="ftbg container">
+
+		<div class="row footer hidden-xs visible-lg visible-md">
+
+			<div class="col-md-offset-1 col-md-2 col-sm-2 col-sm-offset-1 qrcode">
+				<div class="sub-qrcode">
+					<img src="/specialtopic/2/static/img/wx1.png" alt="" class="img-responsive"/>
+					<h6>关注新闻中心微信</h6>
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-2 qrcode" style="text-align:left;">
+				<div class="sub-qrcode">
+					<img src="/specialtopic/2/static/img/wb1.png" alt="" class="img-responsive"/>
+					<h6><a href="http://weibo.com/u/3982954755" style="color:#333;">关注新闻中心微博</a></h6>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-sm-6 qrcode">
+				<div class="qr-desc" style="margin-left:-6%;">
+					Copyright © 2014 电子科技大学新闻中心
+					<br/>
+					Powered by 凝聚网络安全工作室CNSSUESTC
+					<br/>
+					清水河校区: 成都市高新区（西区）西源大道2006号 邮编:611731   电话查号台: 028-83201114
+					<br/>
+					沙河校区: 成都市建设北路二段四号 邮编:610054  电话查号台: 028-83201114
+				</div>
+			</div>
+		</div>
+		<div class="row visible-xs visible-sm hide-md center">
+			<p>
+				<small>Copyright © 2014 电子科技大学新闻中心</small>
+			</p>
+			<p>
+				<small>Powered by CNSSUESTC</small>
+			</p>
+		</div>
+	</div>
+
+</div>
+
+
+</body>
+</html>

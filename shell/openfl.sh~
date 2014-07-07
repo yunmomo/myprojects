@@ -1,0 +1,11 @@
+#! /bin/bash
+
+
+
+datafile='hello.sh'
+exec 3<>$datafile
+while read <&3
+do
+echo $REPLY
+done
+exec 3<&-
